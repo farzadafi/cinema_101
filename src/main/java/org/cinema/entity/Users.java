@@ -1,4 +1,4 @@
-package org.cinema;
+package org.cinema.entity;
 
 public class Users extends Person{
 

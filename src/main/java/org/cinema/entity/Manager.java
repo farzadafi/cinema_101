@@ -1,4 +1,7 @@
-package org.cinema;
+package org.cinema.entity;
+import org.cinema.repository.AdminRepository;
+import org.cinema.CinemaRepository;
+
 import java.sql.*;
 import java.sql.Date;
 import java.util.*;
