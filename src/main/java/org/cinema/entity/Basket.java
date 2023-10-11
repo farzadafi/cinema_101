@@ -10,7 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Basket {
-    private String username;
+    private Users username;
     private Integer idTicket;
     private String filmName;
     private Integer number;
