@@ -1,10 +1,8 @@
-package org.cinma;
+package org.cinema;
 
-public class Admin extends erson{
+public class Admin extends Person {
 
-    public Admin(String firstName,String lastName,String username,String password){
-        this.firstName = firstName;
-        this.lstName = lastame;
-        this.username = usename;
-        this.passwrd = password;
+    public Admin(String firstname, String lastName, String userName, String password) {
+        super(firstname, lastName, userName, password);
     }
+}
