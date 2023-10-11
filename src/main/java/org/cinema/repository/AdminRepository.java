@@ -1,4 +1,4 @@
-package org.cinema;
+package org.cinema.repository;
 
 
 import java.sql.Connection;
