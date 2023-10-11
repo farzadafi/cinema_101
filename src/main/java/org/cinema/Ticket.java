@@ -1,33 +1,18 @@
 package org.cinema;
 
+import lombok.Getter;
+
 import java.sql.Date;
 import java.sql.Time;
-
+@SuppressWarnings("unused")
+@Getter
 public class Ticket {
     private String cinemaName;
-    private String filmname;
-    private Date datetime;
+    private String filmName;
+    private Date dateTime;
     private Time clock;
-    private int numbertickets;
+    private int numberTickets;
     private int  price;
 
-    public String getFilmName() {
-        return filmName;
-    }
 
-    public Date getDatetime(){
-        return datetime;
-    }
-
-    public Time getClock() {
-        return clock;
-    }
-
-    public int getNumberTickets() {
-        return numberTickets;
-    }
-
-    public int getPrice() {
-        return price;
-    }
 }

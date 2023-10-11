@@ -1,0 +1,99 @@
+Index: src/main/java/org/cinema/Basket.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.cinema;\r\n\r\npublic class Basket {\r\n    private String username;\r\n    private Integer idTicket;\r\n    private String filmName;\r\n    private Integer number;\r\n    private Integer priceAll;\r\n\r\n    public String getUsernam() {\r\n        return username;\r\n    }\r\n\r\n    public Integer getIdTicket() {\r\n        return idTicket;\r\n    }\r\n\r\n    public String getFilmName() {\r\n        return filmName;\r\n    }\r\n\r\n    public Iteger getNumber() {\r\n        return number;\r\n    }\r\n\r\n    public Integer getPriceAll() {\r\n        return priceAll;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/cinema/Basket.java b/src/main/java/org/cinema/Basket.java
+--- a/src/main/java/org/cinema/Basket.java	(revision 6646e76befa603b7680c7980bfe821ca45506197)
++++ b/src/main/java/org/cinema/Basket.java	(date 1696792383042)
+@@ -7,23 +7,43 @@
+     private Integer number;
+     private Integer priceAll;
+ 
+-    public String getUsernam() {
++    public String getUsername() {
+         return username;
+     }
+ 
++    public void setUsername(String username) {
++        this.username = username;
++    }
++
+     public Integer getIdTicket() {
+         return idTicket;
+     }
+ 
++    public void setIdTicket(Integer idTicket) {
++        this.idTicket = idTicket;
++    }
++
+     public String getFilmName() {
+         return filmName;
+     }
+ 
+-    public Iteger getNumber() {
++    public void setFilmName(String filmName) {
++        this.filmName = filmName;
++    }
++
++    public Integer getNumber() {
+         return number;
+     }
+ 
++    public void setNumber(Integer number) {
++        this.number = number;
++    }
++
+     public Integer getPriceAll() {
+         return priceAll;
+     }
++
++    public void setPriceAll(Integer priceAll) {
++        this.priceAll = priceAll;
++    }
+ }
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 6646e76befa603b7680c7980bfe821ca45506197)
++++ b/.idea/misc.xml	(date 1696792094613)
+@@ -8,4 +8,5 @@
+       </list>
+     </option>
+   </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: .idea/git_toolbox_prj.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/git_toolbox_prj.xml b/.idea/git_toolbox_prj.xml
+new file mode 100644
+--- /dev/null	(date 1696792094627)
++++ b/.idea/git_toolbox_prj.xml	(date 1696792094627)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GitToolBoxProjectSettings">
++    <option name="commitMessageIssueKeyValidationOverride">
++      <BoolValueOverride>
++        <option name="enabled" value="true" />
++      </BoolValueOverride>
++    </option>
++    <option name="commitMessageValidationEnabledOverride">
++      <BoolValueOverride>
++        <option name="enabled" value="true" />
++      </BoolValueOverride>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
