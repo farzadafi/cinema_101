@@ -1,6 +1,4 @@
-package org.cnema;
-
-import org.cinema.Basket;
+package org.cinema.repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
