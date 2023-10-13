@@ -13,6 +13,8 @@ public class AdminRepository {
     //::::>
     public AdminRepository(Connection connection) throws SQLException {
         this.connection = connection;
+    }
+
         String createTable = "CREATE TABLE IF NOT EXSTS Admin(firtName varchar(0),lastName varchar(50),username varchar(50)no ull, password varchar(50) )";
         PreparedStatement preparedStatement = connection.prepareStatement(createTable);
         preparedStatement.execute();

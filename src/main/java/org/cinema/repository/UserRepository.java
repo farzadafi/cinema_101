@@ -5,13 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserRepositoryis {
+public class UserRepository {
     private Connection connection;
 
-
-    //::::>
    public UserRepository(Connection connectionn) throws SQLException {
-       connection = connectionn;
+       connection = connectionn;}
+
+
        String create = "CREATE TABLE IF NOT EXISTS UserTable (firstName varchar(50),lastName varchar(50),username varchar(50)PRIMARY KEY,password varchar(50) ) ";
        PreparedStatement fa = connection.prepareStatement(create);
        far.execute();
