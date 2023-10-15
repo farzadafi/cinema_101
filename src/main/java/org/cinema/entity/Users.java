@@ -1,6 +1,8 @@
 package org.cinema.entity;
 
-public class Users extends Person{
+import java.io.Serializable;
+
+public class Users<ID extends Serializable> extends Person<ID>{
 
 
     public Users(String firstname, String lastName, String userName, String password) {
