@@ -1,5 +1,8 @@
 package org.cinema;
 
+import lombok.Getter;
+@SuppressWarnings("unused")
+@Getter
 public class Basket {
     private String username;
     private Integer idTicket;
@@ -7,23 +10,5 @@ public class Basket {
     private Integer number;
     private Integer priceAll;
 
-    public String getUsernam() {
-        return username;
-    }
 
-    public Integer getIdTicket() {
-        return idTicket;
-    }
-
-    public String getFilmName() {
-        return filmName;
-    }
-
-    public Iteger getNumber() {
-        return number;
-    }
-
-    public Integer getPriceAll() {
-        return priceAll;
-    }
 }

@@ -1,15 +1,17 @@
-package org.cinema;
+package org.cinema.repository;
+
+import org.cinema.entity.Ticket;
 
 import java.sql.*;
 import java.util.Date;
-import java.util.Set;
 
 public class TicketRepository {
     private Connection connection;
 
-    //::::>
     public TicketRepository(Connection connection) throws SQLException {
         this.connection = connection;
+    }
+
         String createTable = "CREATE TABLE IF NOT TicketTable(id serial KEY,cinemaName varchar(50),filmName varchar(50),datetime date,clock time,numberTicket int,price int,numberBuy int " +
          ",CONSTRAINT KEY(cinemaName) REFERENCES Cinema (cinemaName))";
         PreparedStatement preparedStatement = connection.prepareStatement(createTable);

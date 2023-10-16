@@ -1,4 +1,11 @@
 package org.cinema;
+import org.cinema.entity.Admin;
+import org.cinema.entity.Basket;
+import org.cinema.entity.Cinema;
+import org.cinema.entity.Ticket;
+import org.cinema.repository.AdminRepository;
+import org.cinema.CinemaRepository;
+
 import java.sql.*;
 import java.sql.Date;
 import java.util.*;
@@ -41,7 +48,7 @@ public class Manager {
         }
         System.out.print("Enter your password:");
         password = input.nextLine();
-        Admin admin = new Admin(firstName,lastName,username,password);
+        org.cinema.entity.Admin admin = new Admin(firstName,lastName,username,password);
         int result =  adminRepository.importAdmin(admin);
         if(result != 1 )
             System.out.println("Sign up is successfully and now you can Sign In!");
@@ -238,7 +245,7 @@ public class Manager {
         priceAll = calcPriceAll(numberTickets,Integer.parseInt(ticketInformation[2]));
         int allBuy = ticketRepository.allBuyTicket(id) + numberTickets;
         ticketRepository.updateNumberTicketBuy(id,allBuy);
-        Basket basket = new Basket(username,id,filmName,numberTickets,priceAll);
+        org.cinema.entity.Basket basket = new Basket(username,id,filmName,numberTickets,priceAll);
         if(basketRepository.importTicket(basket) != 0)
             System.out.println("Ticket you Enter successful add to you Basket!");
         else

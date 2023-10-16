@@ -7,17 +7,20 @@ import lombok.Setter;
 import org.cinema.base.model.BaseEntity;
 
 import java.io.Serializable;
-
+import java.sql.Date;
+import java.sql.Time;
+@SuppressWarnings("unused")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Basket<ID extends Serializable> extends BaseEntity<ID> {
-    private String username;
-    private Integer idTicket;
+public class Ticket<ID extends Serializable> extends BaseEntity<ID> {
+    private String cinemaName;
     private String filmName;
-    private Integer number;
-    private Integer priceAll;
+    private Date dateTime;
+    private Time clock;
+    private int numberTickets;
+    private int  price;
 
 
 }

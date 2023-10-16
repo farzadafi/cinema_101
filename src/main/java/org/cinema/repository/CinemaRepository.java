@@ -1,18 +1,17 @@
-package org.cinema;
+package org.cinema.repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-class CinemaRepository {
-    priate Connection connection;
+public class CinemaRepository {
+    private Connection connection;
 
-    public CinemaRepository(){}
-
-    //::::>
     public CinemaRepository(Connection connection) throws SQLException {
         this.connection = connection;
+    }
+
         String createTable = "CREATE IF NOT EXISTS Cinema (cinemaName varchar(50)PRIMARY KEY,cinemaNumber varchar(50),username varchar(50),password varchar(50),confirm int )";
         PreparedStatement preparedStatement = connection.prepareStatement(createTable);
         preparedStatement.execute();
