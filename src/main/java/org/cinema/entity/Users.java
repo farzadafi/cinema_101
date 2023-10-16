@@ -1,10 +1,12 @@
 package org.cinema.entity;
 
-public class Users extends Person{
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
-
-    public Users(String firstname, String lastName, String userName, String password) {
-        super(firstname, lastName, userName, password);
-    }
+import java.io.Serializable;
+@SuppressWarnings("unused")
+@NoArgsConstructor
+@AllArgsConstructor
+public class Users<ID extends Serializable> extends Person<ID>{
 
 }
