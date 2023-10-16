@@ -19,7 +19,6 @@ public class Ticket<ID extends Serializable> extends BaseEntity<ID> {
     private String filmName;
     private Date dateTime;
     private Time clock;
-    private int numberTickets;
     private int  price;
 
 

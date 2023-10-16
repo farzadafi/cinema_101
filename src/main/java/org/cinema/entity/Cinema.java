@@ -14,7 +14,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class Cinema<ID extends Serializable> extends BaseEntity<ID> {
     private String cinemaName;
-    private String cinemaNumber;
     private String username;
     private String password;
     private int confirm;
