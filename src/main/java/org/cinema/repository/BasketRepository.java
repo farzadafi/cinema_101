@@ -6,10 +6,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class BasketRepository {
-    private Connection connectio;
+    private Connection connection;
 
     public BasketRepository(Connection connection) throws SQLException {
         this.connection = connection;
+    }
         String createTable = " CREATE TABLE IF NOT EXISTS asket(id serial,username varchar(50) REFERENCES UserTable(username)," +
                        "idTicket Integer REFERENCES TicketTable(id),filmNae varchar(0),numberTicket Integer,priceAll Integer) ";
         PreparedStatement preparedStatement = connection.prepareStatement(createTable);
