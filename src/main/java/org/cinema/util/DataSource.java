@@ -4,15 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DataSourse {
+public class DataSource {
 
     private static Connection connection;
 
 
     static {
         try {
-            connection = DriverManager.getConnection(ApplicationPropertices.URL
-                    , ApplicationPropertices.USERNAME, ApplicationPropertices.PASSWORD);
+            connection = DriverManager.getConnection(ApplicationProperties.URL
+                    , ApplicationProperties.USERNAME, ApplicationProperties.PASSWORD);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

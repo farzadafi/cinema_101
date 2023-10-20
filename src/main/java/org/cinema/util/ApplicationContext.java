@@ -5,8 +5,8 @@ import org.cinema.service.*;
 
 import java.sql.Connection;
 @SuppressWarnings("unused")
-public class ApplicationContex {
-    private static final Connection connertion;
+public class ApplicationContext {
+    private static final Connection connection;
     private static final UserRepository userRepository;
     private static final UserService userService;
     private static final AdminRepository adminRepository;
@@ -20,16 +20,16 @@ public class ApplicationContex {
 
 
     static {
-        connertion =DataSourse.getConnection();
-        userRepository =new UserRepository(connertion);
+        connection = DataSource.getConnection();
+        userRepository =new UserRepository(connection);
         userService = new UserService(userRepository);
-        adminRepository = new AdminRepository(connertion);
+        adminRepository = new AdminRepository(connection);
         adminService = new AdminService(adminRepository);
-        cinemaRepository =new CinemaRepository(connertion);
+        cinemaRepository =new CinemaRepository(connection);
         cinemaService = new CinemaService(cinemaRepository);
-        basketRepository =new BasketRepository(connertion);
+        basketRepository =new BasketRepository(connection);
         basketService =new BasketService(basketRepository);
-        ticketRepository =new TicketRepository(connertion);
+        ticketRepository =new TicketRepository(connection);
         ticketService =new TicketService(ticketRepository);
 
     }
