@@ -5,10 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
+import java.io.Serializabl
 
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Admin<ID extends Serializable> extends Person<ID> {
