@@ -16,7 +16,7 @@ public class Basket<ID extends Serializable> extends BaseEntity<ID> {
     private String username;
     private Integer idTicket;
     private String filmName;
-    private Integer number;
+    private Integer count;
     private Integer priceAll;
 
 
