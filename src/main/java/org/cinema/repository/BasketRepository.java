@@ -1,5 +1,7 @@
 package org.cinema.repository;
 
+import org.cinema.entity.Basket;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,13 +13,9 @@ public class BasketRepository {
     public BasketRepository(Connection connection) throws SQLException {
         this.connection = connection;
     }
-        String createTable = " CREATE TABLE IF NOT EXISTS asket(id serial,username varchar(50) REFERENCES UserTable(username)," +
-                       "idTicket Integer REFERENCES TicketTable(id),filmNae varchar(0),numberTicket Integer,priceAll Integer) ";
-        PreparedStatement preparedStatement = connection.prepareStatement(createTable);
-        preparedStatement.execute();
-    }
+    {
 
-    //::::>
+
     public int importTicket(Basket basket) throws SQLException {
         String importBasket = "INSERT INTO (username,idTicket,filmName,numberTicket,pricea) VALUES (?,?, ?, ?)";
         PreparedStatement preparedStatement = connection.prepareStatement(importBasket);

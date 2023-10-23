@@ -14,11 +14,7 @@ public class AdminRepository {
         this.connection = connection;
     }
 
-    public void setCreateTable() throws SQLException {
-        String createTable = "CREATE TABLE IF NOT EXISTS  Admin(id serial,firstName varchar(50),lastName varchar(50),username varchar(50)not null, password varchar(50) )";
-        Statement statement = connection.createStatement();
-        statement.executeUpdate(createTable);
-    }
+
 
 
     public int importAdmin(Admin admin) throws SQLException {
