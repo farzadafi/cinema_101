@@ -14,15 +14,6 @@ public class UserRepository {
        connection = connectionn;
    }
 
-
-       String create = "CREATE TABLE IF NOT EXISTS UserTable (firstName varchar(50),lastName varchar(50),username varchar(50)PRIMARY KEY,password varchar(50) ) ";
-       PreparedStatement preparedStatement = connection.prepareStatement(create);
-
-
-
-
-
-
     //::::>
     public int importUser(Users user) throws SQLException {
         String importValue = "INSERT INTO UserTable (firstName,lastName,username,password) VALUES (?, ?, ?, ?)";
