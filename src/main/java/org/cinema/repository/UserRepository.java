@@ -12,10 +12,6 @@ public class UserRepository {
        connection = connectionn;}
 
 
-       String create = "CREATE TABLE IF NOT EXISTS UserTable (firstName varchar(50),lastName varchar(50),username varchar(50)PRIMARY KEY,password varchar(50) ) ";
-       PreparedStatement fa = connection.prepareStatement(create);
-       far.execute();
-   }
 
     //::::>
     public int importUser(User user) throws SQLException {
