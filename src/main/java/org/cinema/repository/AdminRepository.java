@@ -6,25 +6,22 @@ import org.cinema.entity.Admin;
 import java.sql.*;
 
 @SuppressWarnings("unused")
-public class AdminRepository {
+public class AdminRepository  {
     private Connection connection;
-
 
     public AdminRepository(Connection connection) throws SQLException {
         this.connection = connection;
     }
 
 
-
-
-    public int importAdmin(Admin admin) throws SQLException {
+    public int importAdmin(Admin<Integer> admin) throws SQLException {
         String importValue = "INSERT INTO Admin(firstName,lastName,username,password) VALUES (?,?,?,?)";
         PreparedStatement preparStatement = connection.prepareStatement(importValue);
-        preparedStatement.setString(1, admin.getFirstName());
-        preparedStatement.setString(2, admin.getLastName());
-        preparedStatement.setString(3, admin.getUserName());
-        preparedStatement.setString(4, admin.getPassword());
-        return preparedStatement.executeUpdate();
+        preparStatement.setString(1, admin.getFirstName());
+        preparStatement.setString(2, admin.getLastName());
+        preparStatement.setString(3, admin.getUserName());
+        preparStatement.setString(4, admin.getPassword());
+        return preparStatement.executeUpdate();
     }
 
     //::::>
