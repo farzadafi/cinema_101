@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("unused")
 public abstract class BaseEntityRepositoryImpl<ID extends Serializable,TYPE extends BaseEntity<ID>>
@@ -38,6 +40,20 @@ public abstract class BaseEntityRepositoryImpl<ID extends Serializable,TYPE exte
                 return mapResultSetToEntity(resultSet);
         }
         return null;
+    }
+
+    @Override
+    public List<TYPE> findAll() throws SQLException {
+        List<TYPE> entities = new ArrayList<>();
+        String sql = "SELECT * FROM " + getTableName() + ";";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                TYPE entity = mapResultSetToEntity(resultSet);
+                entities.add(entity);
+            }
+        }
+        return entities;
     }
 
     @Override
