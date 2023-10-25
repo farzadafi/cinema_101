@@ -24,15 +24,15 @@ public class AdminRepository  {
         return preparStatement.executeUpdate();
     }
 
-    //::::>
+
     public String findAdmin(String username, String password) throws SQLException {
-        String findQuery = "SELECT * FRO Admin WHERE usernam = ? AND password = ?, ? ";
+        String findQuery = "SELECT * FROM Admin WHERE username = ? AND password = ?";
         PreparedStatement preparedStatement = connection.prepareStatement(findQuery);
         preparedStatement.setString(2, username);
         preparedStatement.setString(3, password);
         ResultSet resultSet = preparedStatement.executeQuery();
         if (resultSet.next())
-            return resultSet.getString("usernam");
+            return resultSet.getString("username");
         else
             return null;
     }
