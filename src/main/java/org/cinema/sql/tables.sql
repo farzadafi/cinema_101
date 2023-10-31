@@ -1,9 +1,9 @@
 CREATE TABLE IF NOT EXISTS Admin
 (
-    id        serial,
+    id        serial primary key,
     firstName varchar(50),
     lastName  varchar(50),
-    username  varchar(50) not null,
+    username  varchar(50) unique,
     password  varchar(50)
 );
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT exists TicketTable
 (
     id           serial PRIMARY KEY,
     cinemaName   varchar(50)
-references cinema(cinemaName),
+        references cinema (cinemaName),
     filmName     varchar(50),
     datetime     date,
     clock        time,
@@ -44,10 +44,11 @@ references cinema(cinemaName),
 );
 
 
-CREATE TABLE IF NOT EXISTS UserTable
+CREATE TABLE IF NOT EXISTS Users
 (
+    id        serial primary key,
     firstName varchar(50),
     lastName  varchar(50),
-    username  varchar(50) PRIMARY KEY,
+    username  varchar(50) unique,
     password  varchar(50)
 );
